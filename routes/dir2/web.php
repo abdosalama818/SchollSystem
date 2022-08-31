@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Classrooms\ClassroomController;
 use App\Http\Controllers\Grades\GradeController;
 
 use Illuminate\Support\Facades\Auth;
@@ -36,6 +37,7 @@ Route::group(
 
 
     Route::resource('Grades',GradeController::class);
+    Route::resource('Classrooms',ClassroomController::class);
 
 });
 

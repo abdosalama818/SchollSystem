@@ -13,6 +13,7 @@ use App\Traits\queryTrait;
 
     public function store($request){
 
+        $this->unique_data(new Grade(),'Name',$request->Name,'Name',$request->Name_en);
         $this->storeGraidTrait($request);
         toastr()->success(trans('messages.success'));
 

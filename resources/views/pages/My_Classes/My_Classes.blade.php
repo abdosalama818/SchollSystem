@@ -43,7 +43,7 @@
 
             <br><br>
 
-                <form action="{{ route('Filter_Classes') }}" method="POST">
+                <form action="{{-- {{ route('Filter_Classes') }} --}}" method="POST">
                     {{ csrf_field() }}
                     <select class="selectpicker" data-style="btn-info" name="Grade_id" required
                             onchange="this.form.submit()">
@@ -322,7 +322,7 @@
                 </button>
             </div>
 
-            <form action="{{ route('delete_all') }}" method="POST">
+            <form action="{{-- {{ route('delete_all') }} --}}" method="POST">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     {{ trans('My_Classes_trans.Warning_Grade') }}

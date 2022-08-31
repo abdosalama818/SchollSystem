@@ -35,6 +35,7 @@ class GradeController extends Controller
 
     public function store(StoreGrades  $request)
     {
+          $this->unique_data(new Grade(),'Name->ar',$request->Name,'Name->en',$request->Name_en);
 
        try{
         $validated = $request->validated();
